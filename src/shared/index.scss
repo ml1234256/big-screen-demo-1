@@ -29,6 +29,10 @@ body {
   font-family: $font-hei;
   font-size: 16px;
 }
+#root {
+  border: 1px solid red;
+  margin: 0 auto;
+}
 
 h1,
 h2,
