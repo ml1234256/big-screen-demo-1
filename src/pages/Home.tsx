@@ -5,7 +5,7 @@ import './home.scss';
 export const Home = () => {
     return (
         <div className="home">
-            <header>中国互联网络发展状况统计</header>
+            <header><h1>中国互联网络发展状况统计</h1></header>
             <main> 
                 <section className="section-1">1</section>
                 <section className="section-2">2</section>
