@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $background-color;
 }
 
 code {
@@ -30,7 +31,7 @@ body {
   font-size: 16px;
 }
 #root {
-  border: 1px solid red;
+  border: 1px solid $border-color;
   margin: 0 auto;
   display: flex;
   // flex-direction: column;

@@ -9,3 +9,5 @@ $ui-width: 1354;
 @function px2rem($px) {
   @return #{$px/$ui-width * 100}rem;
 }
+$background-color: #020609;
+$border-color: #071d2c;
