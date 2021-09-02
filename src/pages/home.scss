@@ -39,6 +39,11 @@ main {
   .section-3 {
     width: px2rem(360);
   }
+  .section-1 {
+    .chart-13 {
+      margin-bottom: 0;
+    }
+  }
   .section-2 {
     flex-grow: 1;
     .chart-21 {
@@ -53,5 +58,10 @@ main {
       border: 1px solid $border-color;
       height: px2rem(110);
     }
+  }
+}
+.section-3 {
+  .chart-33 {
+    margin-bottom: 0;
   }
 }
