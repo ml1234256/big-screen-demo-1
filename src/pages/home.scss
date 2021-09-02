@@ -17,7 +17,7 @@ header {
   }
 }
 footer {
-  height: px2rem(36);
+  height: px2rem(24);
 }
 main {
   display: flex;
@@ -25,16 +25,22 @@ main {
   padding-top: px2rem(24);
   section {
     border: 1px solid;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    background-color: pink;
+    background-color: transparent;
   }
   .chart {
-    border: 1px solid $border-color;
     flex: 1;
+    background-color: #051019;
+    border: 1px solid $border-color;
+    margin: 0 px2rem(12) px2rem(12);
+  }
+  .section-1,
+  .section-3 {
+    width: px2rem(360);
   }
   .section-2 {
+    flex-grow: 1;
     .chart-21 {
       border: 1px solid $border-color;
       height: px2rem(105);
