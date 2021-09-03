@@ -1,9 +1,11 @@
 import React from "react";
 import './home.scss';
-import * as echarst from 'echarts';
-import { useRef } from "react";
-import { useEffect } from "react";
-import { ChartApp } from '../components/chartApp';
+import { Chart1 } from '../components/chart-1';
+import { Chart2 } from '../components/chart-2';
+import { Chart3 } from '../components/chart-3';
+import { Chart4 } from '../components/chart-4';
+import { Chart5 } from '../components/chart-5';
+import { Chart6 } from '../components/chart-6';
 
 export const Home = () => {
 
@@ -13,10 +15,14 @@ export const Home = () => {
             <main> 
                 <section className="section-1">
                     <div className="chart chart-11">
-                       <ChartApp />
+                       <Chart1 />
                     </div>
-                    <div className="chart chart-12"></div>
-                    <div className="chart chart-13"></div>
+                    <div className="chart chart-12">
+                        <Chart4 />
+                    </div>
+                    <div className="chart chart-13">
+                        <Chart2 />
+                    </div>
                 </section>
                 <section className="section-2">
                     <div className="chart-21"></div>
@@ -24,9 +30,15 @@ export const Home = () => {
                     <div className="chart-23"></div>
                 </section>
                 <section className="section-3">
-                    <div className="chart chart-31"></div>
-                    <div className="chart chart-32"></div>
-                    <div className="chart chart-33"></div>
+                    <div className="chart chart-31">
+                        <Chart6 />
+                    </div>
+                    <div className="chart chart-32">
+                        <Chart5 />
+                    </div>
+                    <div className="chart chart-33">
+                        <Chart3 />
+                    </div>
                 </section>
             </main>
             <footer>

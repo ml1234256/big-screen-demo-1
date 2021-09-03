@@ -2,13 +2,15 @@ import { useEffect, useRef } from "react";
 import * as echarts from 'echarts';
 import styled from 'styled-components';
 
+// App 在架数量与分类占比
+
 const ChartWrapper = styled.div`
   display: flex;
   height: 100%;
 `;
 
 
-export const ChartApp:React.FC = () => {
+export const Chart1 = () => {
     const chartDiv1 = useRef<HTMLDivElement>(null);
     const chartDiv2 = useRef<HTMLDivElement>(null);
         useEffect(() => {
@@ -35,30 +37,22 @@ export const ChartApp:React.FC = () => {
                 }]
             };
             let options2 = {
-            title: {
-                text: 'App 在架数量'
-            },
-            tooltip: {},
-            xAxis: {
-                data: ['2017', '2018', '2019', '2020'],
-                axisTick: {show: false},
-                axisLabel: {
-                formatter(val: any) {
-                    if (val.length > 2) {
-                    const array = val.split('');
-                    array.splice(2, 0, '\n');
-                    return array.join('');
-                    } else {
-                    return val;
-                    }
-                }
-        },
-            },
-            yAxis: {},
-            series: [{
-                type: 'bar',  // color: 'red',
-                data: [402, 456, 367, 345]
-            }]
+                title: {
+                    text: 'App 在架数量'
+                },
+                tooltip: {},
+                xAxis: {
+                    data: ['2017', '2018', '2019', '2020'],
+                    axisTick: { show: false },
+                    axisLabel: {
+                        fontSize:6
+                    },
+                },
+                yAxis: {},
+                series: [{
+                    type: 'bar',  // color: 'red',
+                    data: [402, 456, 367, 345]
+                }]
             };
 
             options1 && myChart1.setOption(options1);

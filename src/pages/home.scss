@@ -22,7 +22,10 @@ footer {
 main {
   display: flex;
   flex-grow: 1;
+  max-height: 90%;
   padding-top: px2rem(24);
+  position: relative;
+  border: 1px solid #fff;
   section {
     border: 1px solid;
     display: flex;
@@ -30,7 +33,7 @@ main {
     background-color: transparent;
   }
   .chart {
-    flex: 1;
+    height: 33.33%;
     background-color: #051019;
     border: 1px solid $border-color;
     margin: 0 px2rem(12) px2rem(12);
