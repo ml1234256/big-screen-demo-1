@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import styled from 'styled-components';
 
-// 城乡网民结构
+// 城乡地区互联网普及率
 
 const ChartWrapper = styled.div`
     width:100%;
@@ -14,7 +14,7 @@ const ChartWrapper = styled.div`
 export const Chart5 = () => {
     return (
         <ChartWrapper>
-           城乡网民结构
+           城乡地区互联网普及率
         </ChartWrapper>
     )
 }
