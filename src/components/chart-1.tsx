@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as echarts from 'echarts';
 import styled from 'styled-components';
+import { px2rem } from "../shared/px2rem";
 
 // App 在架数量与分类占比
 
@@ -9,7 +10,7 @@ const ChartWrapper = styled.div`
   height: 100%;
 `;
 
-const px2rem = (n:any) => n / 1355 * (window as any).pageWidth;
+
 export const Chart1 = () => {
     const chartDiv1 = useRef<HTMLDivElement>(null);
     const chartDiv2 = useRef<HTMLDivElement>(null);

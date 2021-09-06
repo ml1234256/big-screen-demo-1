@@ -1,0 +1,1 @@
+export const px2rem = (n:any) => n / 1355 * (window as any).pageWidth;
