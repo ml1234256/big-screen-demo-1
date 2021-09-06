@@ -9,7 +9,7 @@ const ChartWrapper = styled.div`
   height: 100%;
 `;
 
-
+const px2rem = (n:any) => n / 1355 * (window as any).pageWidth;
 export const Chart1 = () => {
     const chartDiv1 = useRef<HTMLDivElement>(null);
     const chartDiv2 = useRef<HTMLDivElement>(null);
@@ -17,9 +17,6 @@ export const Chart1 = () => {
             const myChart1 = echarts.init((chartDiv1 as any).current);
             const myChart2 = echarts.init((chartDiv2 as any).current);
             let options1 = {
-                title: {
-                    text: 'App分类占比'
-                },
                 xAxis: {show: false},
                 yAxis: {show: false},
                 legend: {show: false},
@@ -37,24 +34,44 @@ export const Chart1 = () => {
                 }]
             };
             let options2 = {
-                title: {
-                    text: 'App 在架数量'
-                },
-                tooltip: {},
+                textStyle: {
+                    fontSize: px2rem(12),
+                    color: '#79839E'
+                        },
+
+                title: {show: false},
+                legend: {show: false},
                 xAxis: {
                     data: ['2017', '2018', '2019', '2020'],
                     axisTick: { show: false },
                     axisLabel: {
-                        fontSize:6
+                        fontSize: px2rem(12),
                     },
                 },
-                yAxis: {},
+                yAxis: {
+                    axisLine: {
+                        show:true
+                    },
+                    splitLine: {
+                        show: false
+                    },
+                    axisLabel: {
+                        fontSize: px2rem(12),
+                    }
+                },
+                grid: {
+                    left: '25%',
+                    top: '25%',
+                    right: '10%',
+                    bottom:'16%'
+                },
                 series: [{
                     type: 'bar',  // color: 'red',
-                    data: [402, 456, 367, 345]
+                    data: [402, 456, 367, 345],
+                    barWidth: 10
                 }]
             };
-
+            
             options1 && myChart1.setOption(options1);
             options2 && myChart2.setOption(options2);
             }, [])
