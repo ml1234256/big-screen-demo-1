@@ -20,8 +20,9 @@ export const Chart6 = () => {
             //     text: '城乡网民结构'
             // },
             legend: {
-              data: ['农村','城市'],  
+              data: ['农村','城镇'],  
             },
+            
             tooltip: {},
             xAxis: {
                 data: ['2020.3', '2020.12'],
@@ -40,7 +41,7 @@ export const Chart6 = () => {
                     barWidth:'10',
                 },
                 {
-                    name: '城市',
+                    name: '城镇',
                     type: 'bar',
                     barGap:'-100%', //设置多柱子重叠
                     color: '#5470C6',
