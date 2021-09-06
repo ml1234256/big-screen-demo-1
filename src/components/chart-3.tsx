@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 import styled from 'styled-components';
 import * as echarts from 'echarts';
+import { createEchartOption } from "../shared/create-echarts-option";
 
 // 互联网接入设备使用情况
 
 const ChartWrapper = styled.div`
-    width:100%;
+    height:100%;
     max-height:100%;
     color: #fff;
     border: 1px solid #fff;
@@ -16,7 +17,7 @@ export const Chart3 = () => {
     const chartDiv = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const myChart = echarts.init((chartDiv as any).current);
-        let options = {
+        let options = createEchartOption({
             title: {
                 text: '互联网接入设备使用情况'
             },
@@ -41,7 +42,7 @@ export const Chart3 = () => {
                     data: [32.8, 28.2, 99.7, 24.0, 22.9]
                 }
             ]
-        };
+        });
 
         options && myChart.setOption(options);
     }, [])

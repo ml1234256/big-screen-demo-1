@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const ChartWrapper = styled.div`
     width:100%;
+    height:100%;
     max-height:100%;
     color: #fff;
     border: 1px solid #fff;

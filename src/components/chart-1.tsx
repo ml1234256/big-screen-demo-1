@@ -2,13 +2,14 @@ import { useEffect, useRef } from "react";
 import * as echarts from 'echarts';
 import styled from 'styled-components';
 import { px2rem } from "../shared/px2rem";
-import { baseEchartOption } from "../shared/create-echarts-option";
+import { createEchartOption } from "../shared/create-echarts-option";
 
 // App 在架数量与分类占比
 
 const ChartWrapper = styled.div`
   display: flex;
-  height: 100%;
+     height:100%;
+    max-height:100%;
 `;
 
 
@@ -35,7 +36,7 @@ export const Chart1 = () => {
                     ]
                 }]
             };
-            let options2 = baseEchartOption({
+            let options2 = createEchartOption({
                
                 xAxis: {
                     data: ['2017', '2018', '2019', '2020'],
@@ -62,7 +63,6 @@ export const Chart1 = () => {
                     barWidth: 10
                 }]
             });
-            
             options1 && myChart1.setOption(options1);
             options2 && myChart2.setOption(options2);
             }, [])

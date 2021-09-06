@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Table = styled.div`
     display: grid;
-    width:100%;
+       height:100%;
     max-height:100%;
     color: #fff;
     border: 1px solid #fff;

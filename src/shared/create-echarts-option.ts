@@ -1,6 +1,6 @@
 import { px2rem } from "./px2rem";
 
-export const baseEchartOption = (option: any) => {
+export const createEchartOption = (option: any) => {
     const createOption = {
         textStyle: {
             fontSize: px2rem(12),
@@ -9,7 +9,7 @@ export const baseEchartOption = (option: any) => {
         title: { show: false },
         legend: { show: false },
         grid: {
-            left: '25%',
+            left: '15%',
             top: '25%',
             right: '10%',
             bottom: '16%'
