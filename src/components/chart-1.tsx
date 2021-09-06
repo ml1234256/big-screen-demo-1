@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import * as echarts from 'echarts';
 import styled from 'styled-components';
 import { px2rem } from "../shared/px2rem";
+import { baseEchartOption } from "../shared/create-echarts-option";
 
 // App 在架数量与分类占比
 
@@ -34,14 +35,8 @@ export const Chart1 = () => {
                     ]
                 }]
             };
-            let options2 = {
-                textStyle: {
-                    fontSize: px2rem(12),
-                    color: '#79839E'
-                        },
-
-                title: {show: false},
-                legend: {show: false},
+            let options2 = baseEchartOption({
+               
                 xAxis: {
                     data: ['2017', '2018', '2019', '2020'],
                     axisTick: { show: false },
@@ -60,18 +55,13 @@ export const Chart1 = () => {
                         fontSize: px2rem(12),
                     }
                 },
-                grid: {
-                    left: '25%',
-                    top: '25%',
-                    right: '10%',
-                    bottom:'16%'
-                },
+               
                 series: [{
                     type: 'bar',  // color: 'red',
                     data: [402, 456, 367, 345],
                     barWidth: 10
                 }]
-            };
+            });
             
             options1 && myChart1.setOption(options1);
             options2 && myChart2.setOption(options2);
