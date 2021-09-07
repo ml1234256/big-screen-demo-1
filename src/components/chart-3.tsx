@@ -18,7 +18,7 @@ export const Chart3 = () => {
     const chartDiv = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const myChart = echarts.init((chartDiv as any).current);
-        let options = createEchartOption({
+        let option = createEchartOption({
             tooltip: {},
             legend: {
                 data: ['2020.3', '2020.12'],
@@ -61,7 +61,7 @@ export const Chart3 = () => {
             ]
         });
 
-        options && myChart.setOption(options);
+        option && myChart.setOption(option);
     }, [])
     return (
         <ChartWrapper>

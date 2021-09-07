@@ -27,7 +27,6 @@ export const Chart1 = () => {
             let options1 = createEchartOption({
                 xAxis: {show: false},
                 yAxis: {show: false},
-                legend: {show: false},
                 series: [{
                     type: 'pie',
                     radius: ['35%', '50%'],
@@ -45,7 +44,6 @@ export const Chart1 = () => {
                 }]
             });
             let options2 = createEchartOption({
-               
                 xAxis: {
                     data: ['2017', '2018', '2019', '2020'],
                     axisTick: { show: false },
@@ -64,7 +62,6 @@ export const Chart1 = () => {
                         fontSize:px2rem(12)
                     }
                 },
-               
                 series: [{
                     type: 'bar',  // color: 'red',
                     data: [402, 456, 367, 345],
