@@ -8,15 +8,20 @@ import { createEchartOption } from "../shared/create-echarts-option";
 
 const ChartWrapper = styled.div`
     display: flex;
+    flex-direction: column;
     height:100%;
     max-height:100%;
+    border:1px solid #fff;
+`;
+const Title = styled.h2`
+    color: #fff;
+    text-align: center;
 `;
 const ChartDiv = styled.div`
     height:100%;
     width: 100%;
     border:1px solid #fff;
 `
-
 
 export const Chart1 = () => {
     const chartDiv1 = useRef<HTMLDivElement>(null);
@@ -76,8 +81,11 @@ export const Chart1 = () => {
             }, [])
     return (
         <ChartWrapper>
-            <ChartDiv ref={chartDiv1}></ChartDiv>
-            <ChartDiv ref={chartDiv2}></ChartDiv>
+            <Title>App 在架数量与分类占比</Title>
+            <div style={{display:'flex', height:'100%'}}>
+                <ChartDiv ref={chartDiv1}></ChartDiv>
+                <ChartDiv ref={chartDiv2}></ChartDiv>
+            </div>
         </ChartWrapper>
         )
 }

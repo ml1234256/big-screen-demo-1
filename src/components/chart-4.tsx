@@ -12,14 +12,14 @@ flex-direction: column;
     max-height:100%;
     border:1px solid #fff;
 `;
+const Title = styled.h2`
+    color: #fff;
+    text-align: center;
+`;
 const ChartDiv = styled.div`
     height:100%;
     width: 100%;
     border:1px solid #fff;
-`;
-const Title = styled.h2`
-    color: #fff;
-    text-align: center;
 `;
 
 export const Chart4 = () => {
@@ -93,10 +93,12 @@ export const Chart4 = () => {
     return (
         <ChartWrapper>
             <Title>网民学历结构与个人月收入</Title>
-            <div style={{ height: '100%', display:'flex'}}>
-                <ChartDiv ref={chartDiv1}></ChartDiv>
-                <ChartDiv ref={chartDiv2}></ChartDiv>
-            </div>
+            <ChartDiv>
+                <div style={{display:'flex', height:'100%'}}>
+                    <ChartDiv ref={chartDiv1}></ChartDiv>
+                    <ChartDiv ref={chartDiv2}></ChartDiv>
+                </div>
+            </ChartDiv>
         </ChartWrapper>
     )
 }

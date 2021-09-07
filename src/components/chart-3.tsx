@@ -7,13 +7,20 @@ import { px2rem } from "../shared/px2rem";
 // 互联网接入设备使用情况
 
 const ChartWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
     height:100%;
     max-height:100%;
-    color: #fff;
-    border: 1px solid #fff;
-    font-size:6px;
+    border:1px solid #fff;
 `;
-
+const Title = styled.h2`
+    color: #fff;
+    text-align: center;
+`;
+const ChartDiv = styled.div`
+    height:100%;
+    width: 100%;
+`;
 export const Chart3 = () => {
     const chartDiv = useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -65,11 +72,8 @@ export const Chart3 = () => {
     }, [])
     return (
         <ChartWrapper>
-            <div ref={chartDiv}
-                style={{
-                width: "100%",
-                height: "100%",
-            }}></div>
+            <Title>互联网接入设备使用情况</Title>
+            <ChartDiv ref={chartDiv}></ChartDiv>
         </ChartWrapper>
     )
 }
