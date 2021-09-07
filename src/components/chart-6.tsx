@@ -18,9 +18,6 @@ export const Chart6 = () => {
     useEffect(() => {
         const myChart = echarts.init((chartDiv as any).current);
         let options = createEchartOption({
-            // title: {
-            //     text: '城乡网民结构'
-            // },
             legend: {
                 data: ['农村', '城镇'],
             },
@@ -40,7 +37,10 @@ export const Chart6 = () => {
                     type: 'bar',
                     color: '#EE6666',
                     data: [100, 100],
-                    barWidth: '10',
+                    barWidth: '6',
+                    itemStyle: {
+                        borderRadius: [3, 3, 0, 0]
+                    }
                 },
                 {
                     name: '城镇',
@@ -48,7 +48,7 @@ export const Chart6 = () => {
                     barGap: '-100%', //设置多柱子重叠
                     color: '#5470C6',
                     data: [71.8, 68.7],
-                    barWidth: '10',
+                    barWidth: '6',
                 }
             ]
         });
