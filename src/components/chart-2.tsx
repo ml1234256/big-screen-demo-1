@@ -1,19 +1,9 @@
 import { useEffect, useRef } from "react";
 import styled from 'styled-components';
+import { ChartDiv } from "./chart-div";
 
 // 网页数量
 
-const ChartWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    height:100%;
-    max-height:100%;
-    border:1px solid #fff;
-`;
-const Title = styled.h2`
-    color: #fff;
-    text-align: center;
-`;
 const Table = styled.table`
   height: 100%;
   width: 100%;
@@ -31,8 +21,7 @@ const Table = styled.table`
 
 export const Chart2 = () => {
     return (
-        <ChartWrapper>
-            <Title>网页数量表格</Title>
+        <ChartDiv title='网页数量表格'>
             <Table>
                 <thead>
                     <tr>
@@ -75,7 +64,7 @@ export const Chart2 = () => {
 
                 </tbody>
             </Table>
-        </ChartWrapper>
+        </ChartDiv>
        
     )
 }

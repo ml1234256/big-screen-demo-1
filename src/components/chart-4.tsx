@@ -3,23 +3,14 @@ import styled from 'styled-components';
 import * as echarts from 'echarts';
 import { createEchartOption } from "../shared/create-echarts-option";
 import { px2rem } from "../shared/px2rem";
+import { ChartDiv } from "./chart-div";
+
 // 网民学历结构与个人月收入
 
-const ChartWrapper = styled.div`
-display: flex;
-flex-direction: column;
-    height:100%;
-    max-height:100%;
-    border:1px solid #fff;
-`;
-const Title = styled.h2`
-    color: #fff;
-    text-align: center;
-`;
-const ChartDiv = styled.div`
+const ChartDiva = styled.div`
     height:100%;
     width: 100%;
-    border:1px solid #fff;
+    /* border:1px solid #fff; */
 `;
 
 export const Chart4 = () => {
@@ -91,14 +82,9 @@ export const Chart4 = () => {
         option2 && myChart2.setOption(option2)
     },[])
     return (
-        <ChartWrapper>
-            <Title>网民学历结构与个人月收入</Title>
-            <ChartDiv>
-                <div style={{display:'flex', height:'100%'}}>
-                    <ChartDiv ref={chartDiv1}></ChartDiv>
-                    <ChartDiv ref={chartDiv2}></ChartDiv>
-                </div>
-            </ChartDiv>
-        </ChartWrapper>
+        <ChartDiv title='网民学历结构与个人月收入'>
+            <ChartDiva ref={chartDiv1}></ChartDiva>
+            <ChartDiva ref={chartDiv2}></ChartDiva>
+        </ChartDiv>
     )
 }

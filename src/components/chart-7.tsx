@@ -2,24 +2,9 @@ import { useEffect, useRef } from "react";
 import styled from 'styled-components';
 import * as echarts from 'echarts';
 import { createEchartOption } from "../shared/create-echarts-option";
+import { ChartDiv } from "./chart-div";
 
-// 城乡网民结构
-const ChartWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    height:100%;
-    max-height:100%;
-    border:1px solid #fff;
-`;
-const Title = styled.h2`
-    color: #fff;
-    text-align: center;
-`;
-const ChartDiv = styled.div`
-    height:100%;
-    width: 100%;
-    border:1px solid #fff;
-`;
+// 网页数量热点区域
 
 export const Chart7 = () => {
     const china = require('../geo/china.json');
@@ -89,9 +74,8 @@ export const Chart7 = () => {
         option && myChart.setOption(option);
     }, []);
     return (
-        <ChartWrapper>
-            <Title>网页数量热点区域</Title>
-            <ChartDiv ref={chartDiv}></ChartDiv>
-        </ChartWrapper>
+            <ChartDiv title="网页数量热点区域">
+                <div ref={chartDiv} style={{ height: '100%', width:'100%'}}></div>
+            </ChartDiv>
     )
 }

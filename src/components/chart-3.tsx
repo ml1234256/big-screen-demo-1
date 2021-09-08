@@ -2,25 +2,11 @@ import { useEffect, useRef } from "react";
 import styled from 'styled-components';
 import * as echarts from 'echarts';
 import { createEchartOption } from "../shared/create-echarts-option";
-import { px2rem } from "../shared/px2rem";
+import { ChartDiv } from "./chart-div";
+
 
 // 互联网接入设备使用情况
 
-const ChartWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    height:100%;
-    max-height:100%;
-    border:1px solid #fff;
-`;
-const Title = styled.h2`
-    color: #fff;
-    text-align: center;
-`;
-const ChartDiv = styled.div`
-    height:100%;
-    width: 100%;
-`;
 export const Chart3 = () => {
     const chartDiv = useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -71,9 +57,8 @@ export const Chart3 = () => {
         option && myChart.setOption(option);
     }, [])
     return (
-        <ChartWrapper>
-            <Title>互联网接入设备使用情况</Title>
-            <ChartDiv ref={chartDiv}></ChartDiv>
-        </ChartWrapper>
+        <ChartDiv title='互联网接入设备使用情况'>
+            <div ref={chartDiv} style={{ height: '100%', width: '100%' }}></div>
+        </ChartDiv>
     )
 }

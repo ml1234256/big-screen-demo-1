@@ -2,24 +2,10 @@ import { useEffect, useRef } from "react";
 import styled from 'styled-components';
 import * as echarts from 'echarts';
 import { createEchartOption } from "../shared/create-echarts-option";
+import { ChartDiv } from "./chart-div";
 
 // 城乡地区互联网普及率
-const ChartWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    height:100%;
-    max-height:100%;
-    border:1px solid #fff;
-`;
-const Title = styled.h2`
-    color: #fff;
-    text-align: center;
-`;
-const ChartDiv = styled.div`
-    height:100%;
-    width: 100%;
-    border:1px solid #fff;
-`;
+
 export const Chart5 = () => {
     const chartDiv = useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -57,9 +43,8 @@ export const Chart5 = () => {
         options && myChart.setOption(options);
     },[])
     return (
-        <ChartWrapper>
-            <Title>城乡地区互联网普及率</Title>
-            <ChartDiv ref={chartDiv}></ChartDiv>
-        </ChartWrapper>
+        <ChartDiv title="城乡地区互联网普及率">
+            <div ref={chartDiv} style={{ height: '100%', width:'100%'}}></div>
+        </ChartDiv>
     )
 }

@@ -3,24 +3,15 @@ import * as echarts from 'echarts';
 import styled from 'styled-components';
 import { px2rem } from "../shared/px2rem";
 import { createEchartOption } from "../shared/create-echarts-option";
+import { ChartDiv } from "./chart-div";
 
 // App 在架数量与分类占比
 
-const ChartWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    height:100%;
-    max-height:100%;
-    border:1px solid #fff;
-`;
-const Title = styled.h2`
-    color: #fff;
-    text-align: center;
-`;
-const ChartDiv = styled.div`
+const ChartDiva = styled.div`
     height:100%;
     width: 100%;
-    border:1px solid #fff;
+    /* border:1px solid #fff; */
+    flex-grow: 1;
 `
 
 export const Chart1 = () => {
@@ -80,12 +71,9 @@ export const Chart1 = () => {
             options2 && myChart2.setOption(options2);
             }, [])
     return (
-        <ChartWrapper>
-            <Title>App 在架数量与分类占比</Title>
-            <div style={{display:'flex', height:'100%'}}>
-                <ChartDiv ref={chartDiv1}></ChartDiv>
-                <ChartDiv ref={chartDiv2}></ChartDiv>
-            </div>
-        </ChartWrapper>
+        <ChartDiv title='App 在架数量与分类占比'>
+                <ChartDiva ref={chartDiv1}></ChartDiva>
+                <ChartDiva ref={chartDiv2}></ChartDiva>
+        </ChartDiv>
         )
 }
