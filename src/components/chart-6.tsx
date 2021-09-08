@@ -25,7 +25,7 @@ export const Chart6 = () => {
     const chartDiv = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const myChart = echarts.init((chartDiv as any).current);
-        let options = createEchartOption({
+        let option = createEchartOption({
             legend: {
                 data: ['农村', '城镇'],
             },
@@ -60,7 +60,7 @@ export const Chart6 = () => {
                 }
             ]
         });
-        options && myChart.setOption(options);
+        option && myChart.setOption(option);
     },[])
     return (
         <ChartWrapper>
