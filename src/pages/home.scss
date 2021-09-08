@@ -25,7 +25,7 @@ main {
   max-height: 90%;
   padding-top: px2rem(24);
   position: relative;
-  border: 1px solid #fff;
+  // border: 1px solid #fff;
   section {
     border: 1px solid;
     display: flex;
@@ -50,8 +50,8 @@ main {
   .section-2 {
     flex-grow: 1;
     .chart-21 {
-      border: 1px solid $border-color;
-      height: px2rem(105);
+      //border: 1px solid $border-color;
+      //height: px2rem(95);
     }
     .chart-22 {
       border: 1px solid $border-color;
@@ -59,7 +59,7 @@ main {
     }
     .chart-23 {
       border: 1px solid $border-color;
-      height: px2rem(110);
+      height: px2rem(150);
     }
   }
 }

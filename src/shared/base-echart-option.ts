@@ -9,7 +9,7 @@ export const baseEchartOption = {
         title: { show: false },
         legend: { show: false },
         grid: {
-            left: '15%',
+            left: '10%',
             top: '25%',
             right: '10%',
             bottom: '16%'

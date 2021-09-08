@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import * as echarts from 'echarts';
 import { createEchartOption } from "../shared/create-echarts-option";
 import { ChartDiv } from "./chart-div";
+import { px2rem } from "../shared/px2rem";
 
 // 城乡地区互联网普及率
 
@@ -16,14 +17,16 @@ export const Chart5 = () => {
             },
             tooltip: {},
             xAxis: {
+                type: 'category',
+                boundaryGap: false,
                 data: ['2016.12', '2017.12', '2018.12', '2020.3', '2020.12'],
-                axisTick: { show: false },
-                axisLabel: {
-                    fontSize: 6
-                },
+                axisTick: { show: false},
+                axisLine: { show: false },
+                splitLine: {show: true, lineStyle: {color: '#073E78'}},
             },
             yAxis: {
                 show: true,
+                splitLine: {lineStyle: {color: '#073E78'}},
             },
             series: [
                 {

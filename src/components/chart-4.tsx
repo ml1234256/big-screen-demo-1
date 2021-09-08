@@ -41,7 +41,7 @@ export const Chart4 = () => {
         const option2 = createEchartOption({
             grid: {
                 top: '10%',
-                left: '20%',
+                left: '26%',
                 bottom: '15%'
             },
              xAxis: {
