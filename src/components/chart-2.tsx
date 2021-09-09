@@ -1,8 +1,7 @@
-import { useEffect, useRef } from "react";
 import styled from 'styled-components';
 import { ChartDiv } from "./chart-div";
 
-// 网页数量
+// 网络诈骗分类
 
 const Table = styled.table`
   height: 100%;
@@ -21,7 +20,7 @@ const Table = styled.table`
 
 export const Chart2 = () => {
     return (
-        <ChartDiv title='网页数量表格'>
+        <ChartDiv title='网络诈骗分类'>
             <Table>
                 <thead>
                     <tr>

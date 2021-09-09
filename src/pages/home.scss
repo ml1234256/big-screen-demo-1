@@ -3,14 +3,15 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: $background-color;
+  background-color: #020609;
+  //background-image: url("../img/bg.jpg");
 }
 header {
   border-bottom: 1px solid $border-color;
   height: px2rem(58);
   line-height: px2rem(58);
   text-align: center;
-  background-color: #061019;
+  background-color: rgba(#061019, 1);
   h1 {
     font-weight: bold;
     color: #fff;
@@ -25,16 +26,16 @@ main {
   max-height: 90%;
   padding-top: px2rem(24);
   position: relative;
-  // border: 1px solid #fff;
+  border-bottom: 1px solid $border-color;
   section {
-    border: 1px solid;
+    //border: 1px solid;
     display: flex;
     flex-direction: column;
     background-color: transparent;
   }
   .chart {
     height: 33.33%;
-    background-color: #051019;
+    background-color: rgba($color: #051019, $alpha: 1);
     border: 1px solid $border-color;
     margin: 0 px2rem(12) px2rem(12);
   }
@@ -48,6 +49,7 @@ main {
     }
   }
   .section-2 {
+    position: relative;
     flex-grow: 1;
     .chart-21 {
       //border: 1px solid $border-color;
@@ -55,11 +57,23 @@ main {
     }
     .chart-22 {
       border: 1px solid $border-color;
-      flex: 1;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      padding-bottom: px2rem(100);
     }
     .chart-23 {
-      border: 1px solid $border-color;
+      // border: 1px solid $border-color;
       height: px2rem(150);
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      .chart-8 {
+        .text {
+          font-size: px2rem(20);
+        }
+      }
     }
   }
 }

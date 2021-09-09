@@ -67,7 +67,7 @@ export const Chart4 = () => {
                     axisLabel: {
                         fontSize:px2rem(12)
                     },
-                    data:['8000以上', '5001-8000', '3001-5000', '1501-3000', '1001-1500', '501-1000', '500以下', '无收入']
+                    data:['8k以上', '5k-8k', '3k-5k', '1.5k-3k', '1k-1.5k', '0.5k-1k', '0.5k以下', '无收入']
                 },
                 series: [{
                     type: 'bar',  // color: 'red',
@@ -83,8 +83,8 @@ export const Chart4 = () => {
     },[])
     return (
         <ChartDiv title='网民学历结构与个人月收入'>
-            <ChartDiva ref={chartDiv1}></ChartDiva>
             <ChartDiva ref={chartDiv2}></ChartDiva>
+            <ChartDiva ref={chartDiv1}></ChartDiva>
         </ChartDiv>
     )
 }

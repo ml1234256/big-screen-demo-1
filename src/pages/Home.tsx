@@ -30,7 +30,9 @@ export const Home = () => {
                     <div className="chart-21"></div>
                     <div className="chart-22">
                         <Chart7 />                    </div>
-                    <div className="chart-23"></div>
+                    <div className="chart-23">
+                        <Chart8 />
+                    </div>
                 </section>
                 <section className="section-3">
                     <div className="chart chart-31">

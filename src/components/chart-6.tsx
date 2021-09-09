@@ -1,11 +1,10 @@
 import { useEffect, useRef } from "react";
-import styled from 'styled-components';
 import * as echarts from 'echarts';
 import { createEchartOption } from "../shared/create-echarts-option";
 import { ChartDiv } from "./chart-div";
 import { px2rem } from "../shared/px2rem";
 
-// 城乡网民结构
+// 网站数量
 
 export const Chart6 = () => {
     const chartDiv = useRef<HTMLDivElement>(null);
@@ -16,14 +15,14 @@ export const Chart6 = () => {
                 type: 'category',
                 boundaryGap: false,
                 data: ['2014','2015', '2016', '2017', '2018', '2019', '2020'],
-                splitLine: {show: true, lineStyle: {color: '#073E78'}},
+                splitLine: { show: true, lineStyle: { color: '#0A3149' } },
                 axisTick: {show: false},
                 axisLine: {show: false},
             },
             yAxis: {
                 type: 'value',
                 splitLine: {
-                    lineStyle: { color: '#073E78' }
+                    lineStyle: { color: '#09293D' }
                 },
             },
             series: [{
