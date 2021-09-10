@@ -18,13 +18,17 @@ header {
   }
 }
 footer {
-  height: px2rem(24);
+  height: px2rem(36);
+  color: #fff;
+  font-size: px2rem(12);
+  text-align: center;
+  line-height: px2rem(36);
 }
 main {
   display: flex;
   flex-grow: 1;
   max-height: 90%;
-  padding-top: px2rem(24);
+  padding-top: px2rem(20);
   position: relative;
   border-bottom: 1px solid $border-color;
   section {

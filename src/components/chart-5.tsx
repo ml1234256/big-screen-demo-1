@@ -15,8 +15,8 @@ export const Chart5 = () => {
         let options = createEchartOption({
             legend: {
                 data: ['农村', '城镇'],
-                bottom: 2,
-                itemHeight: 6,
+                bottom: px(2),
+                itemHeight: px(6),
                 textStyle: {
                     color: '#fff',
                     fontSize: px(12),
@@ -26,7 +26,7 @@ export const Chart5 = () => {
             left: '10%',
             top: '10%',
             right: '10%',
-            bottom: '30%'
+            bottom: '28%'
         },
             xAxis: {
                 type: 'category',

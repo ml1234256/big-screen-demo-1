@@ -13,7 +13,7 @@ export const Home = () => {
 
     return (
         <div className="home">
-            <header><h1>中国互联网络发展状况统计</h1></header>
+            <header><h1>中国互联网络发展状况</h1></header>
             <main> 
                 <section className="section-1">
                     <div className="chart chart-11">
@@ -47,7 +47,7 @@ export const Home = () => {
                 </section>
             </main>
             <footer>
-                footer
+                数据来自于《第47次中国互联网发展状况统计报告》，统计日期截止2020年12月。
             </footer>
         </div>
     );
