@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
 import {createEchartOption} from '../shared/create-echarts-option';
-import {px2rem} from '../shared/px2rem';
+import {px} from '../shared/px';
 import styled from 'styled-components';
 
 const ChartWrapper = styled.div`

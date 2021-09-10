@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import * as echarts from 'echarts';
 import { createEchartOption } from "../shared/create-echarts-option";
 import { ChartDiv } from "./chart-div";
-import { px2rem } from "../shared/px2rem";
+import { px } from "../shared/px";
 
 // 城乡地区互联网普及率
 
@@ -10,11 +10,24 @@ export const Chart5 = () => {
     const chartDiv = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const myChart = echarts.init((chartDiv as any).current);
+        console.log(1, px(12));
+        console.log(2, px)
         let options = createEchartOption({
             legend: {
                 data: ['农村', '城镇'],
+                bottom: 2,
+                itemHeight: 6,
+                textStyle: {
+                    color: '#fff',
+                    fontSize: px(12),
+                }
             },
-            tooltip: {},
+            grid: {
+            left: '10%',
+            top: '10%',
+            right: '10%',
+            bottom: '30%'
+        },
             xAxis: {
                 type: 'category',
                 boundaryGap: false,

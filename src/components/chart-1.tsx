@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as echarts from 'echarts';
 import styled from 'styled-components';
-import { px2rem } from "../shared/px2rem";
+import { px } from "../shared/px";
 import { createEchartOption } from "../shared/create-echarts-option";
 import { ChartDiv } from "./chart-div";
 
@@ -44,7 +44,7 @@ export const Chart1 = () => {
                     data: ['2017', '2018', '2019', '2020'],
                     axisTick: { show: false },
                     axisLabel: {
-                        fontSize: px2rem(12)
+                        fontSize: px(12)
                     },
                 },
                 yAxis: {
@@ -55,7 +55,7 @@ export const Chart1 = () => {
                         show: false
                     },
                     axisLabel: {
-                        fontSize:px2rem(12)
+                        fontSize:px(12)
                     }
                 },
                 series: [{

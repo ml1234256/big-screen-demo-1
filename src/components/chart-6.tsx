@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import * as echarts from 'echarts';
 import { createEchartOption } from "../shared/create-echarts-option";
 import { ChartDiv } from "./chart-div";
-import { px2rem } from "../shared/px2rem";
+import { px } from "../shared/px";
 
 // 网站数量
 
@@ -29,8 +29,8 @@ export const Chart6 = () => {
                 type: 'line',
                 data: [335, 425, 482,533,523, 497,443],
                 symbol: 'circle',
-                symbolSize: px2rem(12),
-                lineStyle: {width: px2rem(2)},
+                symbolSize: px(12),
+                lineStyle: {width: px(2)},
                 areaStyle: {
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                     offset: 0,

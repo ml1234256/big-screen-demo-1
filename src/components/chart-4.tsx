@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import styled from 'styled-components';
 import * as echarts from 'echarts';
 import { createEchartOption } from "../shared/create-echarts-option";
-import { px2rem } from "../shared/px2rem";
+import { px } from "../shared/px";
 import { ChartDiv } from "./chart-div";
 
 // 网民学历结构与个人月收入
@@ -53,7 +53,7 @@ export const Chart4 = () => {
                         show: false
                     },
                 axisLabel: {
-                    fontSize: px2rem(12)
+                    fontSize: px(12)
                 },
             },
             yAxis: {
@@ -65,7 +65,7 @@ export const Chart4 = () => {
                         show: false
                     },
                     axisLabel: {
-                        fontSize:px2rem(12)
+                        fontSize:px(12)
                     },
                     data:['8k以上', '5k-8k', '3k-5k', '1.5k-3k', '1k-1.5k', '0.5k-1k', '0.5k以下', '无收入']
                 },

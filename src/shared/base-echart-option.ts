@@ -1,9 +1,9 @@
-import { px2rem } from "./px2rem";
+import { px } from "./px";
 
 
 export const baseEchartOption = {
      textStyle: {
-            fontSize: px2rem(12),
+            fontSize: px(12),
             color: '#79839E'
         },
         title: { show: false },

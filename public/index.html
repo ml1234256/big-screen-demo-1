@@ -16,7 +16,7 @@
     <script>
           const clientWidth = document.documentElement.clientWidth;  // 获取浏览器宽度
           const clientHeight = document.documentElement.clientHeight;  // 获取浏览器高度
-          const pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth; // 计算页面高度
+          window.pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth; // 计算页面高度
           const pageHeight = pageWidth / (16 / 9);    // 计算页面宽度
           // 设置 1rem = 1% * 页面宽度 
           const string = `<style>
