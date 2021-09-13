@@ -15,23 +15,34 @@ export const Chart3 = () => {
             tooltip: {},
             legend: {
                 data: ['2020.3', '2020.12'],
-                 bottom: px(2),
+                bottom: px(2),
                 itemHeight: px(6),
-                 itemWidth: px(12),
+                itemWidth: px(12),
                 textStyle: {
                     color: '#fff',
-                    fontSize: px(12),
+                    fontSize: px(8),
                 }
             },
-              grid: {
-            left: '10%',
-            top: '10%',
-            right: '10%',
-            bottom: '28%'
-        },
+            grid: {
+                left: '10%',
+                top: '10%',
+                right: '10%',
+                bottom: '30%'
+            },
             xAxis: {
                 data: ['台式电脑', '笔记本电脑', '手机', '电视', "平板电脑"],
                 axisTick: { show: false },
+                axisLabel: {
+                formatter(val:string) {
+                    if (val.length > 2) {
+                    const array = val.split('');
+                    array.splice(2, 0, '\n');
+                    return array.join('');
+                    } else {
+                    return val;
+                    }
+                }
+        }
             },
             yAxis: {
                 splitLine: {
@@ -48,7 +59,7 @@ export const Chart3 = () => {
                     data: [42.7, 35.1, 99.3, 32.0, 29.0],
                     barWidth: px(6),
                     itemStyle: {
-                        borderRadius: [3, 3, 0, 0]
+                        borderRadius: [px(3), px(3), 0, 0]
                     }
                 },
                     {
@@ -58,7 +69,7 @@ export const Chart3 = () => {
                     barWidth: px(6),
                     barGap: '50%',
                     itemStyle: {
-                        borderRadius: [3, 3, 0, 0]
+                        borderRadius: [px(3), px(3), 0, 0]
                     }
                 }
             ]

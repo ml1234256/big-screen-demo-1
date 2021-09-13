@@ -9,12 +9,12 @@ export const createEchartOption = (option: any) => {
     if (!(option?.xAxis?.axisLabel?.fontSize)) {
         createOption.xAxis = createOption.xAxis || {};
         createOption.xAxis.axisLabel = createOption.xAxis.axisLabel || {};
-        createOption.xAxis.axisLabel.fontSize = px(12);
+        createOption.xAxis.axisLabel.fontSize = px(10);
     }
     if (!(option?.yAxis?.axisLabel?.fontSize)) {
         createOption.yAxis = createOption.yAxis || {};
         createOption.yAxis.axisLabel = createOption.yAxis.axisLabel || {};
-        createOption.yAxis.axisLabel.fontSize = px(12);
+        createOption.yAxis.axisLabel.fontSize = px(10);
     }
     return createOption
 }

@@ -22,7 +22,17 @@ export const Chart1 = () => {
             const myChart2 = echarts.init((chartDiv2 as any).current);
             let options1 = createEchartOption({
                 xAxis: {show: false},
-                yAxis: {show: false},
+                yAxis: { show: false },
+                legend: {
+                    data: ["游戏", "日常工具", "电子商务", "生活服务", "其他"],
+                    bottom: px(8),
+                    itemHeight: px(6),
+                    itemWidth: px(6),
+                    textStyle: {
+                        color: '#fff',
+                        fontSize: px(8),
+                    }
+                },
                 series: [{
                     type: 'pie',
                     radius: ['35%', '50%'],
@@ -43,9 +53,6 @@ export const Chart1 = () => {
                 xAxis: {
                     data: ['2017', '2018', '2019', '2020'],
                     axisTick: { show: false },
-                    axisLabel: {
-                        fontSize: px(12)
-                    },
                 },
                 yAxis: {
                     axisLine: {
@@ -54,16 +61,13 @@ export const Chart1 = () => {
                     splitLine: {
                         show: false
                     },
-                    axisLabel: {
-                        fontSize:px(12)
-                    }
                 },
                 series: [{
                     type: 'bar',  // color: 'red',
                     data: [402, 456, 367, 345],
                     barWidth: px(6),
                     itemStyle: {
-                        borderRadius:[3, 3, 0, 0]
+                        borderRadius:[px(3), px(3), 0, 0]
                     }
                 }]
             });

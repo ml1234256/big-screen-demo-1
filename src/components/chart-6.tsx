@@ -29,7 +29,7 @@ export const Chart6 = () => {
                 type: 'line',
                 data: [335, 425, 482,533,523, 497,443],
                 symbol: 'circle',
-                symbolSize: px(12),
+                symbolSize: px(8),
                 lineStyle: {width: px(2)},
                 areaStyle: {
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{

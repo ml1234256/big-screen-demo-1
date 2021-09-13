@@ -5,7 +5,7 @@ import { createEchartOption } from "../shared/create-echarts-option";
 import { px } from "../shared/px";
 import { ChartDiv } from "./chart-div";
 
-// 网民学历结构与个人月收入
+// 网民个人月收入
 
 const ChartDiva = styled.div`
     height:100%;
@@ -14,10 +14,10 @@ const ChartDiva = styled.div`
 `;
 
 export const Chart4 = () => {
-    const chartDiv1 = useRef<HTMLDivElement>(null);
+    //const chartDiv1 = useRef<HTMLDivElement>(null);
     const chartDiv2 = useRef<HTMLDivElement>(null);
     useEffect(() => {
-        const myChart1 = echarts.init((chartDiv1 as any).current);
+        //const myChart1 = echarts.init((chartDiv1 as any).current);
         const myChart2 = echarts.init((chartDiv2 as any).current);
         const option1 = createEchartOption({
              xAxis: {show: false},
@@ -41,50 +41,58 @@ export const Chart4 = () => {
         const option2 = createEchartOption({
             grid: {
                 top: '10%',
-                left: '26%',
-                bottom: '15%'
+                left: '18%',
+                bottom: '10%'
             },
              xAxis: {
                 axisTick: { show: false },
                 axisLine: {
-                        show:true
-                },
+                        show:false
+                 },
+                axisLabel:{show:false},
                 splitLine: {
                         show: false
                     },
-                axisLabel: {
-                    fontSize: px(12)
-                },
             },
             yAxis: {
                     axisTick: { show: false },
                     axisLine: {
-                        show:true
+                        show:false
                     },
                     splitLine: {
                         show: false
                     },
-                    axisLabel: {
-                        fontSize:px(12)
-                    },
-                    data:['8k以上', '5k-8k', '3k-5k', '1.5k-3k', '1k-1.5k', '0.5k-1k', '0.5k以下', '无收入']
+                    data:['8k以上', '5k-8k', '3k-5k', '2k-3k', '1k-2k',  '1k以下', '无收入']
                 },
-                series: [{
+                series: [
+                {
                     type: 'bar',  // color: 'red',
-                    data: [14.8, 14.5, 19.6, 19.4, 5.6, 5.7, 9.6, 10.8],
+                    data: [25, 25, 25, 25, 25, 25, 25],
                     barWidth: px(6),
                     itemStyle: {
-                        borderRadius:[0, 3, 3, 0]
-                    }
+                        borderRadius: [0, px(3), px(3), 0],
+                        color:"rgba(84,112,198, 0.3)",
+                        },
+                    
+                },
+                {
+                    type: 'bar',  // color: 'red',
+                    data: [14.8, 14.5, 19.6, 13.0, 12.0, 15.3, 10.8],
+                    barWidth: px(6),
+                    itemStyle: {
+                        borderRadius:[0, px(3), px(3), 0]
+                        },
+                    //showBackground:true
+                    barGap: '-100%',
                 }]
         });
-        option1 && myChart1.setOption(option1);
+        //option1 && myChart1.setOption(option1);
         option2 && myChart2.setOption(option2)
     },[])
     return (
-        <ChartDiv title='网民学历结构与个人月收入'>
+        <ChartDiv title='网民个人月收入'>
             <ChartDiva ref={chartDiv2}></ChartDiva>
-            <ChartDiva ref={chartDiv1}></ChartDiva>
+            {/* <ChartDiva ref={chartDiv1}></ChartDiva> */}
         </ChartDiv>
     )
 }

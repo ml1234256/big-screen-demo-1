@@ -18,7 +18,7 @@ const Content = styled.div`
 const ChartDiv = styled.div`
   height:100%;
   width: 100%;
-  border: 1px solid #fff;
+ // border: 1px solid #fff;
 `;
 
 const ChartText = styled.div`
@@ -51,13 +51,13 @@ export const Chart8 = () => {
         itemWidth: px(6),
         textStyle: {
             color: '#fff',
-            fontSize: px(12),
+            fontSize: px(8),
         }
       },
       series: [{
         name:'性别结构',
         type: 'pie',
-        radius: ['50%', '60%'],
+        radius: ['42%', '50%'],
         avoidLabelOverlap: false,
         data: [
           { value: 49.0, name: "女" },
@@ -77,18 +77,18 @@ export const Chart8 = () => {
         data: ['0-19', '20-29', '30-39', '40-59', '>=60'],
         orient:'vertical',
         right: px(0),
-        bottom:px(12),
+        bottom:px(24),
         itemHeight: px(6),
         itemWidth: px(6),
         textStyle: {
           color: '#fff',
-          fontSize: px(12),
+          fontSize: px(8),
         }
       },
       series: [{
         name:'年龄结构',
         type: 'pie',
-        radius: ['50%', '60%'],
+        radius: ['42%', '50%'],
         avoidLabelOverlap: false,
         data: [
           { value: 16.6, name: "0-19" },
@@ -109,18 +109,18 @@ export const Chart8 = () => {
         data: ['<=1k', '1k-3k',  '3k-5k', '5k-8k', '>=8k'],
         orient:'vertical',
         right: px(0),
-        bottom:px(12),
+        bottom: px(24),
         itemHeight: px(6),
         itemWidth: px(6),
         textStyle: {
           color: '#fff',
-          fontSize: px(12),
+          fontSize: px(8),
         }
       },
       series: [{
         name:'收入结构',
         type: 'pie',
-        radius: ['50%', '60%'],
+        radius: ['42%', '50%'],
         avoidLabelOverlap: false,
         data: [
           { value: 26.1, name: "<=1k" },
@@ -135,8 +135,8 @@ export const Chart8 = () => {
       }]
     });
     option1 && myChart1.setOption(option1);
-    option1 && myChart2.setOption(option2);
-    option1 && myChart3.setOption(option3);
+    option2 && myChart2.setOption(option2);
+    option3 && myChart3.setOption(option3);
   }, [])
   return (
     <ChartWrapper className='chart-8'>
