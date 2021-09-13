@@ -25,7 +25,7 @@ const ChartText = styled.div`
   position: absolute;
   top:50%;
   left:50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-75%,-50%);
   color: #fff;
 `;
   
@@ -45,7 +45,7 @@ export const Chart8 = () => {
       legend: {
         data: ['女', '男'],
         orient:'vertical',
-        right: px(8),
+        right: px(16),
         bottom:'center',
         itemHeight: px(6),
         itemWidth: px(6),
@@ -57,15 +57,22 @@ export const Chart8 = () => {
       series: [{
         name:'性别结构',
         type: 'pie',
-        radius: ['42%', '50%'],
+        radius: ['40%', '50%'],
+        center:['45%', '50%'],
         avoidLabelOverlap: false,
         data: [
           { value: 49.0, name: "女" },
           { value: 51.0, name: "男" },
         ],
         label: {
-          show: false
-        }
+          show: true,
+          position: 'outside',
+          textStyle: { color: 'white', fontSize: px(8) },
+          formatter(options:any) {
+            return options.value + '%';
+          }
+        },
+        labelLine: {show: false, length:0,length2:0},
       }]
     });
 
@@ -76,7 +83,7 @@ export const Chart8 = () => {
       legend: {
         data: ['0-19', '20-29', '30-39', '40-59', '>=60'],
         orient:'vertical',
-        right: px(0),
+        right: px(6),
         bottom:px(24),
         itemHeight: px(6),
         itemWidth: px(6),
@@ -88,7 +95,8 @@ export const Chart8 = () => {
       series: [{
         name:'年龄结构',
         type: 'pie',
-        radius: ['42%', '50%'],
+        radius: ['40%', '50%'],
+        center:['45%', '50%'],
         avoidLabelOverlap: false,
         data: [
           { value: 16.6, name: "0-19" },
@@ -97,9 +105,15 @@ export const Chart8 = () => {
           { value: 33.9, name: "40-59" },
           { value: 11.2, name: ">=60" },
         ],
-        label: {
-          show: false
-        }
+          label: {
+          show: true,
+          position: 'outside',
+          textStyle: { color: 'white', fontSize: px(8) },
+          formatter(options:any) {
+            return options.value + '%';
+          }
+        },
+        labelLine: {show: false, length:0,length2:0},
       }]
     });
     const option3 = createEchartOption({
@@ -108,7 +122,7 @@ export const Chart8 = () => {
       legend: {
         data: ['<=1k', '1k-3k',  '3k-5k', '5k-8k', '>=8k'],
         orient:'vertical',
-        right: px(0),
+        right: px(6),
         bottom: px(24),
         itemHeight: px(6),
         itemWidth: px(6),
@@ -120,7 +134,8 @@ export const Chart8 = () => {
       series: [{
         name:'收入结构',
         type: 'pie',
-        radius: ['42%', '50%'],
+        radius: ['40%', '50%'],
+        center:['45%', '50%'],
         avoidLabelOverlap: false,
         data: [
           { value: 26.1, name: "<=1k" },
@@ -130,8 +145,14 @@ export const Chart8 = () => {
           { value: 14.8, name: ">=8k" },
         ],
         label: {
-          show: false
-        }
+          show: true,
+          position: 'outside',
+          textStyle: { color: 'white', fontSize: px(8) },
+          formatter(options:any) {
+            return options.value + '%';
+          }
+        },
+        labelLine: {show: false, length:0,length2:0},
       }]
     });
     option1 && myChart1.setOption(option1);

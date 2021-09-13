@@ -25,28 +25,41 @@ export const Chart1 = () => {
                 yAxis: { show: false },
                 legend: {
                     data: ["游戏", "日常工具", "电子商务", "生活服务", "其他"],
-                    bottom: px(8),
+                   // orient:'vertical',
+                    //right:'6%',
+                    bottom: '0%',
                     itemHeight: px(6),
                     itemWidth: px(6),
                     textStyle: {
-                        color: '#fff',
-                        fontSize: px(8),
+                    color: '#fff',
+                    fontSize: px(8),
                     }
                 },
                 series: [{
                     type: 'pie',
-                    radius: ['35%', '50%'],
+                    radius: ['0%', '50%'],
+                    center: ['50%', '45%'],
                     avoidLabelOverlap: false, 
                     data: [
                         { value: 25.7, name: "游戏" },
                         { value: 14.6, name: "日常工具" },
                         { value: 9.9, name: "电子商务" },
                         { value: 9.0, name: "生活服务" },
-                        { value:40.8, name: "其他" }
+                        { value: 40.8, name: "其他" }
                     ],
                     label: {
-                        show:false
-                    }
+                        show: true, position: 'outside', textStyle: {color: 'white', fontSize: px(8)},
+                        distanceToLabelLine: 0,
+                        formatter(options:any) {
+                        return options.value + '%';
+                        }
+                    },
+                    labelLine: {show: true, length: 0},
+                    roseType: 'area',
+                    itemStyle: {
+                        shadowBlur: px(200),
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    },
                 }]
             });
             let options2 = createEchartOption({
@@ -62,6 +75,12 @@ export const Chart1 = () => {
                         show: false
                     },
                 },
+                 grid: {
+                    left: '25%',
+                    top: '25%',
+                    right: '10%',
+                    bottom: '16%'
+                },
                 series: [{
                     type: 'bar',  // color: 'red',
                     data: [402, 456, 367, 345],
@@ -76,8 +95,8 @@ export const Chart1 = () => {
             }, [])
     return (
         <ChartDiv title='App 在架数量与分类占比'>
-                <ChartDiva ref={chartDiv1}></ChartDiva>
                 <ChartDiva ref={chartDiv2}></ChartDiva>
+                 <ChartDiva ref={chartDiv1}></ChartDiva> 
         </ChartDiv>
         )
 }
