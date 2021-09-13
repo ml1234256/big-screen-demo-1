@@ -18,15 +18,14 @@ const Content = styled.div`
 const ChartDiv = styled.div`
   height:100%;
   width: 100%;
-  //border: 1px solid #fff;
+  border: 1px solid #fff;
 `;
 
 const ChartText = styled.div`
-position: absolute;
-top:50%;
-left:50%;
-transform: translate(-50%,-50%);
-
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
   color: #fff;
 `;
   
@@ -39,11 +38,24 @@ export const Chart8 = () => {
     const myChart1 = echarts.init((chartDiv1 as any).current);
     const myChart2 = echarts.init((chartDiv2 as any).current);
     const myChart3 = echarts.init((chartDiv3 as any).current);
+
     const option1 = createEchartOption({
       xAxis: { show: false },
       yAxis: { show: false },
+      legend: {
+        data: ['女', '男'],
+        orient:'vertical',
+        right: px(8),
+        bottom:'center',
+        itemHeight: px(6),
+        itemWidth: px(6),
+        textStyle: {
+            color: '#fff',
+            fontSize: px(12),
+        }
+      },
       series: [{
-         name:'性别结构',
+        name:'性别结构',
         type: 'pie',
         radius: ['50%', '60%'],
         avoidLabelOverlap: false,
@@ -60,6 +72,19 @@ export const Chart8 = () => {
     const option2 = createEchartOption({
       xAxis: { show: false },
       yAxis: { show: false },
+   
+      legend: {
+        data: ['0-19', '20-29', '30-39', '40-59', '>=60'],
+        orient:'vertical',
+        right: px(0),
+        bottom:px(12),
+        itemHeight: px(6),
+        itemWidth: px(6),
+        textStyle: {
+          color: '#fff',
+          fontSize: px(12),
+        }
+      },
       series: [{
         name:'年龄结构',
         type: 'pie',
@@ -69,8 +94,7 @@ export const Chart8 = () => {
           { value: 16.6, name: "0-19" },
           { value: 17.8, name: "20-29" },
           { value: 20.5, name: "30-39" },
-          { value: 18.8, name: "40-49" },
-          { value: 15.1, name: "50-59" },
+          { value: 33.9, name: "40-59" },
           { value: 11.2, name: ">=60" },
         ],
         label: {
@@ -81,6 +105,18 @@ export const Chart8 = () => {
     const option3 = createEchartOption({
       xAxis: { show: false },
       yAxis: { show: false },
+      legend: {
+        data: ['<=1k', '1k-3k',  '3k-5k', '5k-8k', '>=8k'],
+        orient:'vertical',
+        right: px(0),
+        bottom:px(12),
+        itemHeight: px(6),
+        itemWidth: px(6),
+        textStyle: {
+          color: '#fff',
+          fontSize: px(12),
+        }
+      },
       series: [{
         name:'收入结构',
         type: 'pie',
@@ -88,11 +124,10 @@ export const Chart8 = () => {
         avoidLabelOverlap: false,
         data: [
           { value: 26.1, name: "<=1k" },
-          { value: 12.0, name: "1k-2k" },
-          { value: 13.0, name: "2k-3k" },
+          { value: 25.0, name: "1k-3k" },
           { value: 19.6, name: "3k-5k" },
           { value: 14.5, name: "5k-8k" },
-          { value: 14.8, name: ">=86" },
+          { value: 14.8, name: ">=8k" },
         ],
         label: {
           show: false

@@ -23,7 +23,7 @@ export const ChartDiv = (props:any) => {
     
     return (
         <ChartWrapper>
-            <Title>{ props.title }</Title>
+            <Title className="title">{ props.title }</Title>
             <Content style={{display:'flex', height:'100%'}}>
                 {props.children}
             </Content>

@@ -42,6 +42,9 @@ main {
     background-color: rgba($color: #051019, $alpha: 1);
     border: 1px solid $border-color;
     margin: 0 px2rem(12) px2rem(12);
+    .title {
+      font-size: px2rem(12);
+    }
   }
   .section-1,
   .section-3 {

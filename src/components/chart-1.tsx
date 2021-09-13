@@ -61,7 +61,7 @@ export const Chart1 = () => {
                 series: [{
                     type: 'bar',  // color: 'red',
                     data: [402, 456, 367, 345],
-                    barWidth: 6,
+                    barWidth: px(6),
                     itemStyle: {
                         borderRadius:[3, 3, 0, 0]
                     }
