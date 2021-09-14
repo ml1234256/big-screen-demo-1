@@ -26,7 +26,7 @@ export const Chart1 = () => {
                 legend: {
                     data: ["游戏", "日常工具", "电子商务", "生活服务", "其他"],
                    // orient:'vertical',
-                    //right:'6%',
+                    right:'4%',
                     bottom: '0%',
                     itemHeight: px(6),
                     itemWidth: px(6),
@@ -37,8 +37,8 @@ export const Chart1 = () => {
                 },
                 series: [{
                     type: 'pie',
-                    radius: ['0%', '50%'],
-                    center: ['50%', '45%'],
+                    radius: ['10%', '55%'],
+                    center: ['46%', '50%'],
                     avoidLabelOverlap: false, 
                     data: [
                         { value: 25.7, name: "游戏" },
@@ -54,7 +54,7 @@ export const Chart1 = () => {
                         return options.value + '%';
                         }
                     },
-                    labelLine: {show: true, length: 0},
+                    labelLine: {show: true, length:2,length2:8},
                     roseType: 'area',
                     itemStyle: {
                         shadowBlur: px(200),
@@ -95,8 +95,8 @@ export const Chart1 = () => {
             }, [])
     return (
         <ChartDiv title='App 在架数量与分类占比'>
-                <ChartDiva ref={chartDiv2}></ChartDiva>
-                 <ChartDiva ref={chartDiv1}></ChartDiva> 
+            <ChartDiva ref={chartDiv2} />
+            <ChartDiva ref={chartDiv1} />
         </ChartDiv>
         )
 }

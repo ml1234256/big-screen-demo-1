@@ -3,25 +3,11 @@ import { ChartDiv } from "./chart-div";
 
 // 网络诈骗分类
 
-const Table = styled.table`
-  height: 100%;
-  width: 100%;
-  table-layout: fixed;
-  border-collapse:collapse;
-  border: 1px solid #fff;
-  color:#fff;
-  th, td{
-      border: 1px solid #fff;
-      padding:0;
-      font-size: 10px;
-      text-align: center;
-  }
-`;
 
 export const Chart2 = () => {
     return (
         <ChartDiv title='网络诈骗分类'>
-            <Table>
+            <table>
                 <thead>
                     <tr>
                         <th>网络诈骗分类</th>
@@ -62,7 +48,7 @@ export const Chart2 = () => {
                     </tr>
 
                 </tbody>
-            </Table>
+            </table>
         </ChartDiv>
        
     )

@@ -17,6 +17,7 @@ const Content = styled.div`
     /* border:1px solid #fff; */
     display: flex;
     flex-grow: 1;
+    position: relative;
 `;
 
 export const ChartDiv = (props:any) => {
