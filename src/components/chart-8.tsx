@@ -45,7 +45,7 @@ export const Chart8 = () => {
       legend: {
         data: ['女', '男'],
         orient:'vertical',
-        right: px(16),
+        right: px(20),
         bottom:'center',
         itemHeight: px(6),
         itemWidth: px(6),
@@ -122,7 +122,7 @@ export const Chart8 = () => {
       legend: {
         data: ['<=1k', '1k-3k',  '3k-5k', '5k-8k', '>=8k'],
         orient:'vertical',
-        right: px(6),
+        right: px(10),
         bottom: px(24),
         itemHeight: px(6),
         itemWidth: px(6),

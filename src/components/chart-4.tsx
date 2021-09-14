@@ -5,7 +5,7 @@ import { createEchartOption } from "../shared/create-echarts-option";
 import { px } from "../shared/px";
 import { ChartDiv } from "./chart-div";
 
-// 网民个人月收入
+// 互联网上市企业类型分布
 
 const ChartDiva = styled.div`
     height:100%;
@@ -41,7 +41,7 @@ export const Chart4 = () => {
         const option2 = createEchartOption({
             grid: {
                 top: '10%',
-                left: '18%',
+                left: '20%',
                 bottom: '10%'
             },
              xAxis: {
@@ -62,27 +62,35 @@ export const Chart4 = () => {
                     splitLine: {
                         show: false
                     },
-                    data:['8k以上', '5k-8k', '3k-5k', '2k-3k', '1k-2k',  '1k以下', '无收入']
+                    data:['其他', '电子商务', '网络金融', '工具软件',  '网络媒体', '网络游戏','文化娱乐']
                 },
                 series: [
                 {
                     type: 'bar',  // color: 'red',
-                    data: [25, 25, 25, 25, 25, 25, 25],
+                    data: [30, 30, 30, 30, 30, 30, 30],
                     barWidth: px(6),
                     itemStyle: {
                         borderRadius: [0, px(3), px(3), 0],
                         color:"rgba(84,112,198, 0.3)",
-                        },
+                    },
                     
                 },
                 {
                     type: 'bar',  // color: 'red',
-                    data: [14.8, 14.5, 19.6, 13.0, 12.0, 15.3, 10.8],
+                    data: [23.0, 12.6, 10.5, 7.7, 5.6, 24.5, 16.1],
                     barWidth: px(6),
                     itemStyle: {
                         borderRadius:[0, px(3), px(3), 0]
                         },
-                    //showBackground:true
+                    // showBackground:true,
+                    label: {
+                        show: true,
+                        position: 'outside',
+                        textStyle: { color: 'white', fontSize: px(8) },
+                        formatter(options:any) {
+                            return options.value + '%';
+                        }
+                    },
                     barGap: '-100%',
                 }]
         });
@@ -90,7 +98,7 @@ export const Chart4 = () => {
         option2 && myChart2.setOption(option2)
     },[])
     return (
-        <ChartDiv title='网民个人月收入'>
+        <ChartDiv title='互联网上市企业类型分布'>
             <ChartDiva ref={chartDiv2}></ChartDiva>
             {/* <ChartDiva ref={chartDiv1}></ChartDiva> */}
         </ChartDiv>
