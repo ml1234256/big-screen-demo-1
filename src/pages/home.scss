@@ -15,6 +15,7 @@ header {
   h1 {
     font-weight: bold;
     color: #fff;
+    border: 1px solid #fff;
   }
 }
 footer {
@@ -23,9 +24,12 @@ footer {
   font-size: px2rem(12);
   text-align: center;
   line-height: px2rem(36);
+  border: 1px solid #fff;
 }
 main {
   display: flex;
+  width: px2rem(1355);
+  margin: 0 auto;
   flex-grow: 1;
   max-height: 90%;
   padding-top: px2rem(20);
@@ -36,6 +40,19 @@ main {
     display: flex;
     flex-direction: column;
     background-color: transparent;
+    h2 {
+      flex-shrink: 0;
+      border-bottom: 1px solid #071d2c;
+      color: #fff;
+      //text-align: center;
+      // border-bottom-left-radius: 4px;
+      //border-bottom-right-radius: 4px;
+      height: px2rem(24);
+      font-size: px2rem(22);
+      line-height: px2rem(24);
+      padding: px2rem(4) px2rem(8);
+      //text-shadow: 0 0 px2rem(3) white;
+    }
   }
   .chart {
     height: 33.33%;
@@ -71,7 +88,7 @@ main {
         td {
           border: 1px solid #1a3671;
           padding: 0;
-          font-size: 10px;
+          font-size: px2rem(10);
           text-align: center;
         }
         thead {
@@ -98,7 +115,7 @@ main {
     //height: px2rem(95);
   }
   .chart-22 {
-    border: 1px solid $border-color;
+    // border: 1px solid $border-color;
     position: absolute;
     height: 100%;
     width: 100%;

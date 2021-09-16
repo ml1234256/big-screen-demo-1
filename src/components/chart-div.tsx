@@ -9,8 +9,6 @@ const ChartWrapper = styled.div`
     /* border:1px solid #fff; */
 `;
 const Title = styled.h2`
-    color: #fff;
-    text-align: center;
 `;
 const Content = styled.div`
     width: 100%;
