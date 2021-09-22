@@ -8,12 +8,19 @@ import { Chart5 } from '../components/chart-5';
 import { Chart6 } from '../components/chart-6';
 import { Chart7 } from '../components/chart-7';
 import { Chart8 } from '../components/chart-8';
+import { Test } from "../components/test";
 
 export const Home = () => {
 
     return (
         <div className="home">
-            <header><h1>中国互联网络发展状况</h1></header>
+            <header>
+                <div className="hd">
+                    <div className="bg"><span></span></div>
+                    <h1>中国网络发展现状</h1>
+                </div>
+            
+            </header>
             <main> 
                 <section className="section-1">
                     <div className="chart chart-11">
