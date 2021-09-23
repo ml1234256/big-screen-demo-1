@@ -45,12 +45,14 @@ export const Chart5 = () => {
                     name: '城镇',
                     type: 'line',
                     color: '#EE6666',
+                    symbolSize: px(4),
                     data: [69.1, 71.0, 74.8, 76.5, 79.8],
                 },
                 {
                     name: '农村',
                     type: 'line',
                     color: '#5470C6',
+                    symbolSize: px(4),
                     data: [33.1, 35.4, 38.4, 46.2, 55.9],
                 }
             ]

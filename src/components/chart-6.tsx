@@ -15,14 +15,14 @@ export const Chart6 = () => {
                 type: 'category',
                 boundaryGap: false,
                 data: ['2014','2015', '2016', '2017', '2018', '2019', '2020'],
-                splitLine: { show: true, lineStyle: { color: '#0A3149' } },
+                splitLine: { show: true, lineStyle: { color: '#073E78' } },
                 axisTick: {show: false},
                 axisLine: {show: false},
             },
             yAxis: {
                 type: 'value',
                 splitLine: {
-                    lineStyle: { color: '#09293D' }
+                    lineStyle: { color: '#073E78' }
                 },
             },
             series: [{
