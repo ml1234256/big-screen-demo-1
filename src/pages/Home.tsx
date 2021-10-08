@@ -34,7 +34,6 @@ export const Home = () => {
                     </div>
                 </section>
                 <section className="section-2">
-                    <div className="chart-21"></div>
                     <div className="chart-22">
                         <Chart7 />                    </div>
                     <div className="chart-23">
