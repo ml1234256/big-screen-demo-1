@@ -14,30 +14,9 @@ const ChartDiva = styled.div`
 `;
 
 export const Chart4 = () => {
-    //const chartDiv1 = useRef<HTMLDivElement>(null);
     const chartDiv2 = useRef<HTMLDivElement>(null);
     useEffect(() => {
-        //const myChart1 = echarts.init((chartDiv1 as any).current);
         const myChart2 = echarts.init((chartDiv2 as any).current);
-        const option1 = createEchartOption({
-             xAxis: {show: false},
-                yAxis: {show: false},
-                series: [{
-                    type: 'pie',
-                    radius: ['0%', '50%'],
-                    avoidLabelOverlap: false, 
-                    data: [
-                        { value:19.3, name: "小学及以下" },
-                        { value: 40.3, name: "初中" },
-                        { value: 20.6, name: "高中/中专、技校" },
-                        { value: 10.5, name: "大学/专科" },
-                        { value: 9.8, name: "本科及以上" }
-                    ],
-                    label: {
-                        show: false
-                    }
-                }]
-        });
         const option2 = createEchartOption({
             grid: {
                 top: '10%',
@@ -100,7 +79,6 @@ export const Chart4 = () => {
     return (
         <ChartDiv title='互联网上市企业类型分布'>
             <ChartDiva ref={chartDiv2}></ChartDiva>
-            {/* <ChartDiva ref={chartDiv1}></ChartDiva> */}
         </ChartDiv>
     )
 }
